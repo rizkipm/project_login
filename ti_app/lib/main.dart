@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/' : (context) => LoginPage(),
+        '/homePage' : (context) => HomePage(),
         RegisterPage.routeName : (context) => RegisterPage(),
-        HomePage.routeName : (context) => HomePage(),
       },
       theme: ThemeData(
         // This is the theme of your application.
@@ -163,7 +163,7 @@ class RegisterPage extends StatelessWidget {
               SizedBox(height: 30,),
               MaterialButton(
                 onPressed: (){
-                  Navigator.pop(context);
+                 Navigator.pushNamed(context, '/homePage');
                 },
                 child: Text('Register', style: TextStyle(color: Colors.white, fontSize: 20),),
                 color: Colors.teal,
